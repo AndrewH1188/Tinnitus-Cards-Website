@@ -10,16 +10,9 @@ body {
     font-family: spartan;
 }
 
-/*--------------------------------------------- Nav Bar */
-
-.nav-extended {
-    background-color: #3d7b9c;
-    margin-bottom: 40px;
-  }
-  
-  .navigation-bar {
-    margin-right: 3%;
-  }
+.container {
+  max-width: 960px;
+}
 
 
 .hero-image {
@@ -28,7 +21,12 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5%;
-    width: 75%;
+
+    width: 93%;
+
+    @media screen and (min-width: 992px ){
+      width: 75%;
+    }
   }
 
 
@@ -36,13 +34,17 @@ body {
 
 
 .col {
-    display:  flex;
-    flex-wrap: nowrap;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  //gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
 
+  @media screen and (min-width: 992px) {
+    flex-wrap: nowrap;
+    margin: 10px auto;
+  }
 }
 
 
@@ -61,6 +63,8 @@ body {
     cursor: pointer;
     transition: all 0.3s;
     padding: 20px;
+
+    margin-bottom: 20px;
     img {
         position: absolute;
         width: 100%;
